@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import {getAll} from '../stateManagement/actions/productAction'
+import {getAll, remove} from '../stateManagement/actions/productAction'
 import {connect} from 'react-redux';
 
 class ProductLists extends Component {
@@ -35,6 +35,12 @@ class ProductLists extends Component {
                     <td className="px-6 py-4">
                         {"$"+item.price}
                     </td>
+                    <td>
+                        <button type="button" className="text-white py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ...">
+                            delete
+                        </button>
+                    </td>
+
                 </tr>
             )}
         </tbody>
@@ -49,6 +55,12 @@ function mapStateToProps(state) {
     return{
         
         products : state.productState.items
+    }
+}
+
+const mapDispathToProps = dispath => {
+    return {
+        removeProduct : (id) => dispath(remove(id))
     }
 }
 
