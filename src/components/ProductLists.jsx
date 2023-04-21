@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import {getAll, remove} from '../stateManagement/actions/productAction'
+import {getAll} from '../stateManagement/actions/productAction'
 import {connect} from 'react-redux';
 
 class ProductLists extends Component {
@@ -44,11 +44,6 @@ class ProductLists extends Component {
   }
 }
 
-// const mapStateToProps = state => {
-//     return { 
-//         products: state.productState.items
-//     }
-// };
 
 function mapStateToProps(state) {
     return{
@@ -57,4 +52,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(ProductLists);
+export default connect(mapStateToProps, {getAll})(ProductLists);
