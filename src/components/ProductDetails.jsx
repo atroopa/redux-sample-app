@@ -14,6 +14,7 @@ const ProductDetails = ({addProduct}) => {
 
     addProduct({id,productName,price});
     alert('add Items SuccessFull ... !');
+    event.target.reset();
 
   }  
 
