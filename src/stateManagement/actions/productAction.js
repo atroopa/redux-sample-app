@@ -24,3 +24,8 @@ export const remove = id => ({
     type: "PRODUCT_REMOVE",
     payload: id
 });
+
+export const edit = item => ({
+    type: "PRODUCT_EDIT",
+    payload: item
+});
