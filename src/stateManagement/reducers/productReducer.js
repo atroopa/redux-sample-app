@@ -17,7 +17,7 @@ const initialState = {
 };
 
 
-function ProductReducer(state, action) {
+function productReducer(state, action) {
 
     switch (action.type) {
 
@@ -39,4 +39,4 @@ function ProductReducer(state, action) {
 
 }
 
-export default ProductReducer;
+export default productReducer;
