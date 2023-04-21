@@ -1,10 +1,12 @@
+import ProductLists from "./components/ProductLists";
 
 
 function App() {
   return (
     <div>
-      App
-    </div>
+      <ProductLists />  
+
+      </div>
   );
 }
 
