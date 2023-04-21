@@ -1,6 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { add } from '../stateManagement/actions/productAction';
 
-const ProductDetails = () => {
+
+const ProductDetails = ({addProduct}) => {
 
   const save = (event) => {
     event.preventDefault();
@@ -8,6 +11,9 @@ const ProductDetails = () => {
     const id = form.get('ProductId');
     const productName = form.get('ProductName');
     const price = form.get('ProductPrice');
+
+    addProduct({id,productName,price});
+    alert('add Items SuccessFull ... !');
 
   }  
 
@@ -53,4 +59,10 @@ const ProductDetails = () => {
   )
 }
 
-export default ProductDetails;
+const mapDispathToProps = dispath => {
+    return {
+        addProduct : (item) => dispath(add(item))
+    }
+}
+
+export default connect(null, mapDispathToProps)(ProductDetails);
