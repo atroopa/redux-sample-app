@@ -31,7 +31,7 @@ function productReducer(state, action) {
             return {...state , items: state.items.concat([action.payload])};
 
         case ProductRemove:
-            return {...state, items:state.item.filter(q => q.id != action.payload)};    
+            return {...state, items:state.item.filter(q => q.id !== action.payload)};    
 
         default:
             return state;
@@ -39,4 +39,4 @@ function productReducer(state, action) {
 
 }
 
-export default productReducer;
+export default productReducer.reducer;
