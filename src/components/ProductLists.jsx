@@ -20,6 +20,9 @@ class ProductLists extends Component {
                         <th scope="col" className="px-6 py-3">
                             Price
                         </th>
+                        <th scope="col" className="px-6 py-3">
+                            Add-Remove
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
