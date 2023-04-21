@@ -1,31 +1,36 @@
-// GetAll
-// GetById
-// Add
-// Remove
-// Edite
+
+import {
+    ProductGetAll,
+    ProductGetById,
+    ProductADD,
+    ProductRemove,
+    ProductEdit
+} from './actionTypes';
+
+
 
 export const getAll = () => ({
-    type:"PRODUCT_GET_ALL",
+    type:ProductGetAll,
 
 });
 
 
 export const getByiD = id => ({
-    type: "PRODUCT_GET_BY_ID",
+    type: ProductGetById,
     pyload: id
 });
 
 export const add = item => ({
-    type: "PRODUCT_ADD",
+    type: ProductADD,
     payload: item
 });
 
 export const remove = id => ({
-    type: "PRODUCT_REMOVE",
+    type:ProductRemove,
     payload: id
 });
 
 export const edit = item => ({
-    type: "PRODUCT_EDIT",
+    type: ProductEdit,
     payload: item
 });
