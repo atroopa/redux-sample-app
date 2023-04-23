@@ -13,9 +13,9 @@ class ProductListsWhitThunk extends Component {
   render() {
     return (
         
-        <div className="relative overflow-x-auto">
-            {this.props.isLoading ? <div>Loading Data From Server ...</div> :  null}
-            {this.props.message ? <div>{this.props.message}</div> : null}
+    <div className="relative overflow-x-auto">
+        {this.props.isLoading ? <div>Loading Data From Server ...</div> :  null}
+        {this.props.message ? <div>{this.props.message}</div> : null}
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>

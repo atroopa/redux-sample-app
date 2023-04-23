@@ -20,7 +20,7 @@ const persistedReducer = persistReducer(persistConfig, reducers)
 
 //export const store = createStore(persistedReducer, applyMiddleware(logger))
 //export const store = createStore(persistedReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-export const store = createStore(persistedReducer, applyMiddleware(thunk))
+export const store = createStore(persistedReducer, applyMiddleware(thunk, logger))
 
 
 export const persistor = persistStore(store)
