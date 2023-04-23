@@ -1,7 +1,7 @@
 import {
-    FETCH_PRODUC_START,
-    FETCH_PRODUC_SUCC ,
-    FETCH_PRODUC_FAIELD
+    FETCH_PRODUCT_START,
+    FETCH_PRODUCT_SUCC ,
+    FETCH_PRODUCT_FAIELD
 } from './actionTypes';
 
 export function getAllProducts(dispatch){
@@ -18,18 +18,18 @@ export function getAllProducts(dispatch){
 }
 
 export const fetchProductStart = () => ({
-    type: FETCH_PRODUC_START,
+    type: FETCH_PRODUCT_START,
 
 })
 
 export const fetchProductSucc = (data) => ({
-    type: FETCH_PRODUC_SUCC,
+    type: FETCH_PRODUCT_SUCC,
     payload: data
     
 })
 
 export const fetchProductFaield = (errorMessage) => ({
-    type: FETCH_PRODUC_FAIELD,
+    type: FETCH_PRODUCT_FAIELD,
     payload: errorMessage
     
 })
